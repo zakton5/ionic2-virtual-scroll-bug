@@ -1,0 +1,31 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-buttons>
+            <!-- Custom back button -->
+            <button class="custom-back-button" ion-button icon-left (click)="navCtrl.parent.parent.pop()">
+                <ion-icon name="arrow-back"></ion-icon>
+                <span>Back</span>
+            </button>
+        </ion-buttons>
+
+        <ion-title>{{item}}</ion-title>
+
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card>
+        <ion-card-content>
+            <p>The left-most back button belongs to the SECOND details page. This page should not exist, and thus neither should the back button.</p>
+            <p>The second back button is a custom back button that I made so that I could have tabs in another place in the nav stack that is NOT the root. (Ionic has made the decision that Tabs should always be at the root)</p>
+
+            <p>Click the first back button, and notice that it will navigate to the first details page, which is an exact replica of this page.
+            Click the second back button, and notice that it correctly takes us back to the list page.</p>
+        </ion-card-content>
+    </ion-card>
+    {{item}}
+</ion-content>
